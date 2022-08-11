@@ -13,7 +13,7 @@ module.exports = {
     },
 
     output: {
-        filename: 'main.[contentHash].js'
+        filename: 'main.js'
     },
     module: {
         rules: [
@@ -74,7 +74,7 @@ module.exports = {
             filename: './index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contentHash].css',
+            filename: '[name].css',
             ignoreOrder: false
         })
     ],

@@ -22,7 +22,7 @@ Production:
     npm run build
 ```
 
-### Para abrir mostrar la página en el navegador se utiliza el comando:
+### Para abrir y mostrar la página en el navegador se utiliza el comando:
 
 ```
     npm start

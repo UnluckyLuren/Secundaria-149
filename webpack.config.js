@@ -40,7 +40,7 @@ module.exports = {
             },
 
             {
-                test: /styles.css$/,
+                test: /\.css$/,
                 use: [MiniCssExtract.loader, "css-loader"],
             },
 
@@ -80,14 +80,14 @@ module.exports = {
 
         new MiniCssExtract({
 
-            filename:'[name].css',
+            filename:'Styles.css',
             ignoreOrder: false
 
         }),
 
         new CopyPlugin({
             patterns: [ 
-                { from: "src/assets/", to: "assets/" } 
+                { from: "src/assets/", to: "assets/" }
             ]
           })
 

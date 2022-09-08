@@ -1,15 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack</title>
-</head>
-<body>
-    
-    <h3>Hola como estan?
-    </h3>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<link rel="stylesheet" href="assets/css/styles-pago.css">
 
+</head>
+<body id="Body-scroll" >
+	<div class="contenedor">
+
+		<!-- Tarjeta -->
+		<section class="tarjeta" id="tarjeta">
+			<div class="delantera" id="delantera">
+				<div class="logo-marca" id="logo-marca">
+					<h1 id="bankname">Bank name</h1>
+				</div>
+				<img src="assets/img-pago/chip-tarjeta.png" class="chip">
+
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Número Tarjeta</p>
+						<p class="numero">#### #### #### ####</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Nombre Tarjeta</p>
+							<p class="nombre">Username</p>
+						</div>
+
+						<div class="grupo" id="expiracion">
+							<p class="label">Expiracion</p>
+							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="trasera">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firma</p>
+						<div class="firma"><p> </p></div>
+					</div>
+					<div class="grupo" id="ccv">
+						<p class="label">CVV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+				<p class="leyenda">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A vitae enim deleniti voluptate explicabo quia culpa distinctio accusantium libero aliquid, recusandae neque veritatis harum quod iure suscipit repudiandae illo magni!</p>
+				<!-- <a href="#" class="link-banco">www.tubanco.com</a> -->
+			</div>
+		</section>
+
+		<!-- Contenedor Boton Abrir Formulario -->
+
+		<!-- <div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div> -->
+
+		<!-- Formulario -->
+
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<label class="grupo">Seleccione su Metodo de Pago</label>
+			<div class="logos">
+				<button id="1"><img src="assets/img-pago/logos/visa.png" alt=""></button>
+				<button id="2"><img src="assets/img-pago/logos/mastercard.png" alt=""></button>
+				<button id="3"><img src="assets/img-pago/logos/logo-Paypal.png" alt=""></button>
+				<button id="4"><img src="assets/img-pago/logos/santander.png"  alt=""></button>
+			</div>
+
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiracion</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="grupo ccv">
+					<label for="inputCCV">CVV</label>
+					<input type="text" id="inputCCV" maxlength="3">
+				</div>
+			</div>
+
+				<a href="#" id="open" > <button class="btn-enviar" >Pagar</button> </a> 
+
+		</form>
+	</div>
+
+
+	<!-- Menu -->
+
+<!-- 
+	<div class="Menu-emergente" id="Menu-emergente" >
+
+        <ul class="Menu-aside">
+
+            <li class="Perfil-User-menu"><a href="./Login-regist.html"> <img src="#"> <p>Inicia Sesión</p> </a></li>
+            <li><a href="./Catalogo.html"> <img src="./img/Img Catalogo/Carpeta.png"> Tus Proyectos </a></li>
+            <li><a href="./Catalogo.html"> <img src="./img/Img Catalogo/Recientes.png"> Recientes </a></li>
+            <li><a href="../Edition/PreEdition.html"> <img src="./img/Img Catalogo/Alfiler.png"> Crea un plano </a></li>
+
+        </ul>
+
+        <ul class="Menu-aside Lista-Categorias">
+
+            <li>Categorias</li>
+            <li> <a href="./Catalogo.html"> Casas Infonavit y similares </a> </li>
+            <li> <a href="./Catalogo.html"> Casas Medianas</a> </li>
+            <li><a href="./Catalogo.html">  Casas Grandes </a> </li>
+            <li><a href="./Catalogo.html"> Casas Residenciales </a> </li>
+
+        </ul>
+
+    </div> -->
+
+
+
+	<div id="navegacion">
+
+		<div class="Menu-emergente-image" id="Menu-emergente-image" >
+			<img src="assets/img/Menu-desplegable.png" alt="imagen de menu">
+		</div>
+
+		<ul>
+			<li><a href="../index.html">Inicio</a> </li>
+			<li><a href="./Catalogo.html">Catalogo</a> </li>
+			<li> <a target="_blanck" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Contactanos</a> </li>
+		</ul>
+	</div>
+  
+	<!-- <div class="Marca">
+		<img src="./img/Marca.png" width="285" alt="Imagen de la marca" >
+	</div> -->
+  
+
+
+	<!-- Ventana emergente -->
+
+        <!-- Para que se habra la ventana debes oponerle a un a el id: open -->
+
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <div class="compr-PAGADA">       
+                    <!-- <button id="close"><img src="/Main/img/Img Catalogo/x.png"></button> -->
+                    <img src="./img/Marca.png" alt="marca de la página" >
+					<p>Tu pago ha sido procesado con éxito.</p>
+
+					<div class="fon-tx-pago">
+						<p>Se guardo en el apartado de tus proyectos</p>
+						<p>Da click en el boton de abajo para ir</p>
+					</div>
+
+					<a href="../Edition/PreEdition.html"> <button class="btn-enviar btn-ver-plano">  Ver mi plano </button> </a>
+
+                </div>
+              
+            </div>
+        </div>
+
+
+
+
+	<!-- Scripts -->
+
+	<script src="assets/js/Scripts-Ventana-de-pago-procesado.js"></script>
+	<script src="assets/js/main-pago.js"></script>
 </body>
 </html>

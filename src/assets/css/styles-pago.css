@@ -315,9 +315,9 @@ body {
           box-shadow: var(--color-sombra);
 }
 
-.contenedor .tarjeta .tarjeta {
+.tarjeta {
   width: 100%;
-  background: url(../img-pago/modelo-normal.png);
+  /* background: url(../img-pago/Tarjeta_Front.jpg); */
   background-size: cover;
 }
 
@@ -333,9 +333,9 @@ body {
   }
 }
 
-.contenedor .delantera {
+.delantera {
   width: 100%;
-  background: url(../img-pago/modelo-normal.png);
+  background: url(../img-pago/Tarjeta_Front.jpg);
   background-size: cover;
 }
 
@@ -367,7 +367,7 @@ body {
 .contenedor .delantera .grupo .numero,
 .contenedor .delantera .grupo .nombre,
 .contenedor .delantera .grupo .expiracion {
-  color: #fff;
+  color: black;
   font-size: 22px;
   text-transform: uppercase;
 }
@@ -382,8 +382,10 @@ body {
   margin-top: 20px;
 }
 
-.contenedor .trasera {
+.trasera {
+  background: url(../img-pago/Tarjeta_Back.jpg);
   background-size: cover;
+ 
   position: absolute;
   top: 0;
   -webkit-transform: rotateY(180deg);
@@ -605,6 +607,107 @@ body {
   transition: all .3s;
   margin-left: auto;
 }
+
+/* Estilos Grado y Grupo */
+
+
+.graderup {
+  display: flex;
+  height: min-content;
+  margin: 0;
+}
+
+.graderup div {
+  margin: 1em 3em 0 0;
+  width: 4em;
+}
+
+.graderup div:last-child {
+  width: auto;
+}
+
+.graderup div:last-child input {
+    opacity: 0;
+    position: absolute;
+    top: 4.7em;
+    width:9em;
+}
+
+.inputImageClick, .inputSelect {
+  margin: 1.5em 0 0 0;
+  border: 2px solid #CED6E0;
+  background-color: rgba(40, 39, 39, 0.192);
+  font-size: 18px;
+  height: 50px;
+  width: 10em;
+  padding: 1em;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Estilizar fecha de expiración */
+
+.optionFlex {
+  display: flex;
+}
+
+.inputSelect {
+  margin-top: 0;
+}
+
+.optionFlex div {
+  margin: 0 2em 2em 0;
+  width: 10em;
+}
+
+/* Acomodo de la información en la tarjeta */
+
+
+.acomodoCurp {
+  position: absolute;
+  top: 12.4em;
+  left: 18em;
+}
+
+.acomodoUser {
+  position: absolute;
+  top: 7.4em;
+  left: 12em;
+}
+
+.selectExpirDisp {
+  display: none;
+}
+
+.selectExpir {
+  z-index: 5;
+  position: absolute;
+  bottom:4px;
+  right: 14em;
+}
+
+.acomodoGradeup {
+  position: absolute;
+  top: 9.3em;
+  left: 26em;
+
+  color: #000;
+}
+
+
+
+.rotateSelect {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.leyenda {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* Ventana ----------------------------------------------------------------------*/
 /* Ventana emergente */

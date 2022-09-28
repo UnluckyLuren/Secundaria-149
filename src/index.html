@@ -34,9 +34,15 @@
 							<p> <span id="textGrade" >Grado</span> / <span id="textGrupo" >Grupo</span> </p>
 						</div>
 
+						<div class="insertImg" id="insertImg" >
+							<img src="" id="imgChoosen" class="styleImgUser">
+						</div>
+
 						<div class="grupo selectExpirDisp selectExpir " id="expiracion" >
 							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
 						</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -79,26 +85,25 @@
 					<input type="text" id="inputGrado" maxlength="1" autocomplete="off">
 				</div>
 				
-
 				<div>
 					<label for="inputGrupo">Grupo</label>
 					<input type="text" id="inputGrupo" maxlength="1" autocomplete="off">
 				</div>
 
 				<div>
-					<label for="inputImage" class="inputImageClick" >Añadir foto</label>
-					<input type="file" id="inputImage" name="imageInput">
+					<label for="inputFile" class="inputImageClick" >Añadir foto</label>
+					<input type="file" id="inputFile" name="imageInput" accept="image/*" >
 				</div>
 
 			</div>
 
 			<div class="grupo">
 				<label for="inputNumero">CURP</label>
-				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+				<input type="text" id="inputNumero" maxlength="16" autocomplete="off">
 			</div>
 			<div class="grupo">
 				<label for="inputNombre">Nombre</label>
-				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+				<input type="text" id="inputNombre" maxlength="30" autocomplete="off">
 			</div>
 			<div>
 				<div class="grupo expira">
@@ -190,7 +195,6 @@
             <div class="modal">
                 <div class="compr-PAGADA">       
                     <!-- <button id="close"><img src="/Main/img/Img Catalogo/x.png"></button> -->
-                    <img src="./img/Marca.png" alt="marca de la página" >
 					<p>Tu descarga comenzará en breve</p>
 
 					<div class="fon-tx-pago">

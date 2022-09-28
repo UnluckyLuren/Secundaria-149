@@ -74,7 +74,7 @@
 }
 
 body {
-  background-image: url(assets/img-pago/Background-6.jpg);
+  /* background-image: url(assets/img-pago/Background-6.jpg); */
   background-size: 100%;
   background-repeat: no-repeat;
   font-family: 'Lato', sans-serif;
@@ -613,6 +613,7 @@ body {
 
 .graderup {
   display: flex;
+  flex-wrap: wrap;
   height: min-content;
   margin: 0;
 }
@@ -706,6 +707,23 @@ body {
 .leyenda {
   opacity: 0;
   pointer-events: none;
+}
+
+.insertImg {
+  width: 10em;
+  height: 13.3em;
+  position: absolute;
+  top: 5.4em;
+  left: 0.7em;
+}
+
+.styleImgUser {
+  width: inherit;
+  height: inherit;
+}
+
+.nombre {
+  font-size: 10px;
 }
 
 

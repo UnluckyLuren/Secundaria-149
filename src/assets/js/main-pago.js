@@ -16,7 +16,12 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  inputGrupo = document.getElementById('inputGrupo'),
 	  textGrupo = document.getElementById('textGrupo');
 
+// Función para mostar la fecha
 
+const showDate = () => {
+	selectExpir.classList.toggle('selectExpirDisp');
+	selectExpir.classList.toggle('rotateSelect')
+}
 
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
@@ -31,9 +36,7 @@ formulario.classList.toggle('active')
 // * Rotacion de la tarjeta
 tarjeta.addEventListener('click', () => {
 	tarjeta.classList.toggle('active')
-	selectExpir.classList.toggle('selectExpirDisp');
-	selectExpir.classList.toggle('rotateSelect')
-
+	showDate()
 })
 
 
@@ -133,13 +136,21 @@ inputGrupo.addEventListener('keyup', e => {
 let ind = 0;
 formulario.selectMes.addEventListener('change', e => {
 	mesExpiracion.textContent = e.target.value;
-	
+
+	if(!tarjeta.classList.contains('active') ) {
+		tarjeta.classList.toggle('active')
+		showDate();
+	}
 })
 
 // * Select Año
 formulario.selectYear.addEventListener('change', e => {
 	yearExpiracion.textContent = e.target.value.slice(2);
-	
+
+	if(!tarjeta.classList.contains('active') ) {
+		tarjeta.classList.toggle('active')
+		showDate();
+	}
 });
 
 
@@ -150,5 +161,35 @@ formulario.selectYear.addEventListener('change', e => {
 formulario.addEventListener('submit', function(event) {
 	event.preventDefault()
 })
+
+
+// Añadir imagen a la credencial
+
+
+const imgSRC = document.getElementById('inputFile'),
+		containImg = document.getElementById('imgChoosen');
+
+		containImg.style.display="none";
+
+imgSRC.onchange = () => {
+
+		containImg.style.display="inline";
+
+		let reader = new FileReader();
+	
+		reader. readAsDataURL (imgSRC. files[0]) ;
+
+		reader.onload = () => {
+		imgChoosen.setAttribute("src",reader.result);
+
+	}
+}
+
+
+
+
+
+
+
 
 

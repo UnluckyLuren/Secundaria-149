@@ -58,11 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         estilosPrint();
 
+        const alumno = document.getElementById('userName');
+        const alumnoName = `${alumno.textContent}`;
         const elementConvert = document.body;
 
         html2pdf(elementConvert, {
             margin:0,
-            filename: 'documento.pdf',
+            filename: `${alumnoName}.pdf`,
 
             image: {
                 type: 'jpg',

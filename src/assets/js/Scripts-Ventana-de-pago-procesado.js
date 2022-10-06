@@ -1,5 +1,5 @@
 const open = document.getElementById( 'open'),
-    tarjetacontainer = document.querySelector('#tarjeta');
+      tarjetacontainer = document.querySelector('#tarjeta');
 
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
@@ -7,10 +7,6 @@ const close = document.getElementById('close');
 open.addEventListener('click', () => {
     modal_container.classList.add('show');
 });
-
-// close.addEventListener('click', () => {
-//     modal_container.classList.remove('show');
-// });
 
 const selectDate = document.getElementById('expiracion');
 
@@ -49,6 +45,24 @@ const estilosPrint = () => {
 
 };
 
+const removeEstilosPrint = () => {
+
+    const form = document.getElementById('formulario-tarjeta'),
+    positionTarjeta = document.getElementById('backTarjeta'),
+    positionTarjetaFront = document.getElementById('delantera'),
+    tarjetaBackFront = document.getElementById('containerTarjeta');
+
+    form.style.display="inline";
+    positionTarjeta.classList.remove('rotateBack');
+    positionTarjeta.classList.remove('toPrintBack');
+    positionTarjetaFront.classList.remove('toPrintFront');
+    tarjetaBackFront.classList.remove('FrontBackPrint');
+
+    document.body.style.overflowX="visible";
+    document.body.style.overflowY="visible";
+
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -70,10 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 type: 'jpg',
                 quality: 0.98
             },
+
             html2canvas: {
                 scale: 2,
                 letterRendering: true
             },
+
             jsPDF: {
                 unit:"mm",
                 format:"a4",
@@ -88,7 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+close.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+    removeEstilosPrint();
 
+    selectDate.classList.remove('rotateDate');
+    selectDate.classList.add('selectExpirDisp');
+
+});
 
 
 

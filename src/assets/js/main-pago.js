@@ -159,7 +159,7 @@ formulario.selectYear.addEventListener('change', e => {
 // const form = document.getElementById('formulario-tarjeta');
 
 formulario.addEventListener('submit', function(event) {
-	event.preventDefault()
+	event.preventDefault();
 })
 
 

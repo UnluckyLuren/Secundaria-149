@@ -74,8 +74,9 @@
 }
 
 body {
-  /* background-image: url(assets/img-pago/Background-6.jpg); */
+  /* background-image: url(../img-pago/BG.jpg); */
   background-size: 100%;
+  /* background-color: white; */
   background-repeat: no-repeat;
   font-family: 'Lato', sans-serif;
   width: 100vw;
@@ -300,7 +301,7 @@ body {
 }
 
 .contenedor .tarjeta > div {
-  padding: 30px;
+  /* padding: 30px; */
   border-radius: 23px;
   min-height: 315px;
   display: -webkit-box;
@@ -313,12 +314,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: var(--color-sombra);
-          box-shadow: var(--color-sombra);
+  /* -webkit-box-shadow: var(--color-sombra);
+          box-shadow: var(--color-sombra); */
 }
 
 .tarjeta {
   width: 100%;
+  height: 22em;
+  padding: 0;
   /* background: url(../img-pago/Tarjeta_Front.jpg); */
   background-size: cover;
 }
@@ -337,7 +340,8 @@ body {
 
 .delantera {
   width: 100%;
-  background: url(../img-pago/Tarjeta_Front.jpg);
+  background: url(../img-pago/Tarjeta_Front.png);
+  height: inherit;
   background-size: cover;
 }
 
@@ -385,8 +389,9 @@ body {
 }
 
 .trasera {
-  background: url(../img-pago/Tarjeta_Back.jpg);
+  background: url(../img-pago/Tarjeta_Back.png);
   background-size: cover;
+  height: inherit;
  
   position: absolute;
   top: 0;
@@ -670,14 +675,14 @@ body {
 
 .acomodoCurp {
   position: absolute;
-  top: 12.4em;
-  left: 18em;
+  top: 10.8em;
+  left: 16em;
 }
 
 .acomodoUser {
   position: absolute;
-  top: 7.4em;
-  left: 12em;
+  top: 7em;
+  left: 17em;
 }
 
 .selectExpirDisp {
@@ -693,10 +698,16 @@ body {
 
 .acomodoGradeup {
   position: absolute;
-  top: 9.3em;
-  left: 26em;
+  top: 15.2em;
+  left: 16.2em;
+  text-align: center;
 
   color: #000;
+}
+
+.acomodoGradeup p span:not(.acomodoGradeup p span:first-child) {
+  position: absolute;
+  left: 7.5em;
 }
 
 
@@ -712,16 +723,17 @@ body {
 }
 
 .insertImg {
-  width: 10em;
-  height: 13.3em;
+  width: 9em;
+  height: 11.5em;
   position: absolute;
-  top: 5.4em;
-  left: 0.7em;
+  top: 7em;
+  left: 1.7em;
 }
 
 .styleImgUser {
   width: inherit;
   height: inherit;
+  border-radius: 1em;
 }
 
 .nombre {
@@ -739,7 +751,7 @@ body {
   display: inline;
   position:absolute;
   top: 25em;
-  height: auto;
+  height: 100%;
   width: 100%;
   margin:0;
 }
@@ -751,7 +763,7 @@ body {
 
 .FrontBackPrint {
   position: absolute;
-  top: -15em;
+  top: -10em;
   left: 5em;
   margin:0;
   padding: 0;
@@ -764,12 +776,12 @@ body {
           transform: rotateY(360deg);
 }
 
-.rotateDate {
+/* .rotateDate {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
 
   top:42.8em;
-}
+} */
 
 /* .acomodoPrintBody {
   width:100%;

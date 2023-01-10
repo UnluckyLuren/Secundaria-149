@@ -8,21 +8,16 @@ open.addEventListener('click', () => {
     modal_container.classList.add('show');
 });
 
-const selectDate = document.getElementById('expiracion');
+// const selectDate = document.getElementById('expiracion');
 
 
 const rotateTarjeta = () => {
 	if(tarjetacontainer.classList.contains('active') ) {
 
 		tarjetacontainer.classList.remove('active')
-        selectDate.classList.add('rotateDate');
+        // selectDate.classList.add('rotateDate');
 
-	} else {
-
-        selectDate.classList.add('rotateDate');
-        selectDate.classList.remove('selectExpirDisp');
-
-    }
+	}
 }
 
 const estilosPrint = () => {
@@ -107,9 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
 close.addEventListener('click', () => {
     modal_container.classList.remove('show');
     removeEstilosPrint();
-
-    selectDate.classList.remove('rotateDate');
-    selectDate.classList.add('selectExpirDisp');
 
 });
 

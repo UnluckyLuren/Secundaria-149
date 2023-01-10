@@ -10,7 +10,7 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  ccv = document.querySelector('#tarjeta .ccv'),
 	  delantera = document.getElementById('delantera'),
 	  backTarjeta = document.getElementById('backTarjeta'),
-	  selectExpir = document.getElementById('expiracion'),
+	//   selectExpir = document.getElementById('expiracion'),
 	  inputGrado = document.getElementById('inputGrado'),
 	  textGrade = document.getElementById('textGrade'),
 	  inputGrupo = document.getElementById('inputGrupo'),
@@ -18,10 +18,10 @@ const tarjeta = document.querySelector('#tarjeta'),
 
 // Función para mostar la fecha
 
-const showDate = () => {
-	selectExpir.classList.toggle('selectExpirDisp');
-	selectExpir.classList.toggle('rotateSelect')
-}
+// const showDate = () => {
+// 	selectExpir.classList.toggle('selectExpirDisp');
+// 	selectExpir.classList.toggle('rotateSelect')
+// }
 
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
@@ -36,27 +36,26 @@ formulario.classList.toggle('active')
 // * Rotacion de la tarjeta
 tarjeta.addEventListener('click', () => {
 	tarjeta.classList.toggle('active')
-	showDate()
 })
 
 
 // * Select del mes generado dinamicamente.
-for(let i = 1; i <= 12; i++){
-	let opcion = document.createElement('option');
-	opcion.value = i;
-	opcion.innerText = i;
-	formulario.selectMes.appendChild(opcion);
-}
+// for(let i = 1; i <= 12; i++){
+// 	let opcion = document.createElement('option');
+// 	opcion.value = i;
+// 	opcion.innerText = i;
+// 	formulario.selectMes.appendChild(opcion);
+// }
 
-// * Select del año generado dinamicamente.
-const yearActual = new Date().getFullYear();
+// // * Select del año generado dinamicamente.
+// const yearActual = new Date().getFullYear();
 
-for(let i = yearActual; i <= yearActual + 8; i++){
-	let opcion = document.createElement('option');
-	opcion.value = i;
-	opcion.innerText = i;
-	formulario.selectYear.appendChild(opcion);
-}
+// for(let i = yearActual; i <= yearActual + 8; i++){
+// 	let opcion = document.createElement('option');
+// 	opcion.value = i;
+// 	opcion.innerText = i;
+// 	formulario.selectYear.appendChild(opcion);
+// }
 
 // * Input numero de tarjeta
 
@@ -109,9 +108,11 @@ inputGrado.addEventListener('keyup', e => {
 	.replace(/\D/g, '')
 
 	textGrade.textContent = valorInput;
+	textGrade.style.marginLeft="1em";
 
 	if(valorInput === ''){
-		textGrade.textContent = 'Grado'
+		textGrade.textContent = 'Grado';
+		textGrade.style.marginLeft="0";
 	}
 
 	mostrarFrente();
@@ -121,9 +122,11 @@ inputGrupo.addEventListener('keyup', e => {
 	let valorInput = e.target.value;
 
 	textGrupo.textContent = valorInput;
+	textGrupo.style.left="8.5em";
 
 	if(valorInput === ''){
-		textGrupo.textContent = 'Grupo'
+		textGrupo.textContent = 'Grupo';
+		textGrupo.style.left="7.5em";
 	}
 
 	mostrarFrente();
@@ -133,25 +136,25 @@ inputGrupo.addEventListener('keyup', e => {
 
 // * Select mes
 
-let ind = 0;
-formulario.selectMes.addEventListener('change', e => {
-	mesExpiracion.textContent = e.target.value;
+// let ind = 0;
+// formulario.selectMes.addEventListener('change', e => {
+// 	mesExpiracion.textContent = e.target.value;
 
-	if(!tarjeta.classList.contains('active') ) {
-		tarjeta.classList.toggle('active')
-		showDate();
-	}
-})
+// 	// if(!tarjeta.classList.contains('active') ) {
+// 	// 	tarjeta.classList.toggle('active')
+// 	// 	showDate();
+// 	// }
+// })
 
-// * Select Año
-formulario.selectYear.addEventListener('change', e => {
-	yearExpiracion.textContent = e.target.value.slice(2);
+// // * Select Año
+// formulario.selectYear.addEventListener('change', e => {
+// 	yearExpiracion.textContent = e.target.value.slice(2);
 
-	if(!tarjeta.classList.contains('active') ) {
-		tarjeta.classList.toggle('active')
-		showDate();
-	}
-});
+// 	// if(!tarjeta.classList.contains('active') ) {
+// 	// 	tarjeta.classList.toggle('active')
+// 	// 	showDate();
+// 	// }
+// });
 
 
 /* Evitar que el evento submit recargue la página */
